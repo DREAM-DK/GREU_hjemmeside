@@ -17,20 +17,16 @@
 <header class="masthead">
   <div class="wrap">
     <div class="brand">
-      <a class="dreamword" href="https://dreamgruppen.dk/">DREAM</a>
+      <a class="dreamword" href="https://dreamgruppen.dk/"><img src="assets/dream-wordmark.svg" alt="DREAM" width="111" height="20" /></a>
       <span class="vrule"></span>
       <a class="sitename" href="index.html"><img class="disc" src="assets/mark.svg" alt="" width="56" height="56" />GreenREFORM-EU</a>
-    </div>
-    <div class="utility">
-      <a href="news.html">Subscribe</a>
-      <a href="https://dreamgruppen.dk/">dreamgruppen.dk</a>
     </div>
   </div>
 </header>
 
 <nav class="main" aria-label="Primary">
   <div class="wrap">
-    <a href="index.html">The model</a>
+    <a href="index.html">Overview</a>
     <a href="documentation.html" aria-current="page">Documentation</a>
     <a href="user-guide.html">User guide</a>
     <a href="get-the-model.html">Get the model</a>
@@ -46,10 +42,10 @@
   <div class="wrap">
     <p class="kicker">Edition 2.0</p>
     <h1>Model documentation</h1>
-    <p class="lead">Theoretical framework and architecture. The document is the source of truth for mechanisms, equations and code names. This page tells you how to read it and where to get it.</p>
+    <p class="lead">Theoretical framework and architecture. The document is the source of truth for mechanisms, equations and code names. This page tells you how to read it, what each chapter covers, and where to get it.</p>
     <div class="actions">
-      <a class="btn" href="#">Download PDF (124 pages)</a>
-      <a class="btn-ghost" href="get-the-model.html">LaTeX source in the repository</a>
+      <a class="btn" href="../content/Documentation/greu_master_merged_v4_EN.pdf">Download PDF</a>
+      <a class="btn-ghost" href="get-the-model.html">Get the model</a>
     </div>
   </div>
 </div>
@@ -69,24 +65,105 @@
           <li>Six chapters and one appendix</li>
           <li>Endnotes carry the code evidence</li>
           <li>Revised as the model is revised</li>
-          <li>Published under the same licence as the model</li>
+          <li>Free to download as a PDF</li>
         </ul>
       </div>
     </div>
 
     <h2>Contents</h2>
-    <ol class="toc">
-      <li><span class="no">1</span><p class="what">Introduction<span>Why the model exists, the technical problem behind its architecture, code structure, the model economy, chapter to code map</span></p></li>
-      <li><span class="no">2</span><p class="what">Households<span>Savings, the Ramsey problem, the consumption tree, energy, housing services</span></p></li>
-      <li><span class="no">3</span><p class="what">Firms<span>Output and price, production function, factor demand, capital, energy end purposes, the energy technology model, corporate finance</span></p></li>
-      <li><span class="no">4</span><p class="what">Government and public finances<span>Revenue, expenditure, public production, sector flows, fiscal closure</span></p></li>
-      <li><span class="no">5</span><p class="what">Rest of the world<span>Export demand, energy exports, imports, the external balance</span></p></li>
-      <li><span class="no">6</span><p class="what">Markets and equilibrium<span>Input-output system, pricing, labour market, energy markets, emissions</span></p></li>
-      <li><span class="no">A</span><p class="what">CES trees and smart indexing<span>The algebra the chapters use without deriving, and how a nesting tree becomes one group of equations</span></p></li>
-    </ol>
+    <p class="measure">Open a chapter to see what it treats, what the model decides there, and what it takes as given. The chapter itself is in the PDF.</p>
+
+    <div class="toc">
+
+      <details id="foreword">
+        <summary><span class="no">&mdash;</span><span class="what">Foreword<span>What the model is, who it was built for, and the one feature that sets it apart</span></span><span class="mark" aria-hidden="true">&rsaquo;</span></summary>
+        <div class="body">
+          <p>GreenREFORM-EU is a dynamic general equilibrium model for fiscal and environmental policy analysis. It was built for the finance ministries, planning bureaus and emissions agencies of EU Member States, and it descends from GreenREFORM, the model the Danish government uses for climate policy, and through it from MAKRO.</p>
+          <p>It integrates the economic national accounts with physical energy balances and greenhouse gas emissions. Capital is split into buildings, machines and transport, each paired with the energy it needs, so a change in an energy price acts on the capital stock that consumes that energy rather than on one undifferentiated aggregate.</p>
+          <p>The distinctive feature is how technology is treated. Switching fuel, electrifying a process or fitting carbon capture are discrete decisions, and the usual choices are to leave them out of the economic model or to solve a separate engineering model and pass results back and forth. This model represents them continuously instead, and solves the technology sub-model together with the macroeconomic core.</p>
+          <p class="src">Foreword, and &ldquo;How to read this document&rdquo;.</p>
+        </div>
+      </details>
+
+      <details id="introduction">
+        <summary><span class="no">1</span><span class="what">Introduction<span>Why the model exists, the technical problem behind its architecture, code structure and modularity, the model economy, the chapter to code map</span></span><span class="mark" aria-hidden="true">&rsaquo;</span></summary>
+        <div class="body">
+          <p>Read this first, whichever chapter you need. It sets out why the model exists, the technical problem that shapes its architecture, how the code is organised and named, the dimensions of the model economy in goods and in time, and the map from chapters to code files.</p>
+          <p>The case for the model is a legal one as much as an analytical one. The revised EU economic governance framework, through the amendments to the directive on national budgetary frameworks, requires Member States to assess the macro-fiscal implications of climate policy. Meeting that asks for tools that capture economy-wide feedback on output, employment, wages, trade and the public finances at once.</p>
+          <p>The technical problem is the gap between engineering and macroeconomics. Energy models know what the technologies cost; macroeconomic models know what a policy does to the economy. The architecture of this model is the answer to joining them, and the rest of the document is the detail of that answer.</p>
+          <p class="src">Chapter 1. Sections: Background, motivation and purpose; The core technical challenge; Code structure and modularity; The model economy; Structure of the documentation and code files.</p>
+        </div>
+      </details>
+
+      <details id="households">
+        <summary><span class="no">2</span><span class="what">Households<span>Savings, the Ramsey problem, the consumption tree, energy consumption, housing services</span></span><span class="mark" aria-hidden="true">&rsaquo;</span></summary>
+        <div class="body">
+          <p>Households optimise over two margins and no more: how much to consume rather than save, and what to buy with the consumption budget.</p>
+          <p><strong>Decided here:</strong> disposable income, aggregate consumption and saving, demand for the twelve consumption purposes, and demand for individual energy goods within them.</p>
+          <p><strong>Taken as given:</strong> labour supply, because employment comes from a Phillips curve around an exogenous path for structural employment, so there is no trade-off between work and leisure; and the composition of wealth, which is fixed outside the model and enters as a single average return on net financial assets.</p>
+          <p>There is no household housing stock and no life-cycle structure. Households buy housing services. The dwelling stock is the building capital of the industry that supplies them.</p>
+          <p class="src">Chapter 2. Sections: Exogenous savings and income; Endogenous savings (Ramsey); The consumption tree; Energy consumption; Housing.</p>
+        </div>
+      </details>
+
+      <details id="firms">
+        <summary><span class="no">3</span><span class="what">Firms<span>Output and price, the production function, factor demand, capital goods, energy end purposes, the energy technology model, the multi-output firm, corporate finance</span></span><span class="mark" aria-hidden="true">&rsaquo;</span></summary>
+        <div class="body">
+          <p>The longest chapter, and the most detailed part of the model. Most of that detail comes from the data rather than from the code: the industry list has 57 entries in the Danish benchmark data set, and a different data set gives a different list.</p>
+          <p><strong>Decided here:</strong> output and the price the firm sets, including industry markups; demand for labour, machinery, structures, vehicles and materials, with the investment that builds the capital stocks; the mix of energy goods, chosen on levelised cost; and corporate earnings, borrowing and dividends.</p>
+          <p><strong>Taken as given:</strong> the size of the market, the base wage, the return investors require, and every tax, subsidy and allowance price.</p>
+          <p>The energy technology model sits in this chapter. It is long, and its length is out of proportion to its reach: it changes what happens where an energy end purpose is resolved into energy goods, and nothing else. What it buys is the ability to bring engineering evidence into the model and analyse energy policy with it.</p>
+          <p class="src">Chapter 3. Sections: Output, cost and price; The production function; Factor demand; Capital goods and intermediate inputs; Energy end purposes; The energy technology model; The multi-output firm; Corporate finance.</p>
+        </div>
+      </details>
+
+      <details id="government">
+        <summary><span class="no">4</span><span class="what">Government and public finances<span>Public revenue, expenditure and transfers, public production, net flows to the other sectors, fiscal closure and sustainability</span></span><span class="mark" aria-hidden="true">&rsaquo;</span></summary>
+        <div class="body">
+          <p>The government is an accounting framework, not an optimising agent. There is no public objective function and no reaction function. Every revenue item is a rate or a share applied to a base decided elsewhere, and every expenditure item is either such a rate or an exogenous path. The modeller decides fiscal policy, not the model.</p>
+          <p><strong>Decided here:</strong> the whole of public revenue and expenditure, the primary balance and the path of government net financial assets, the fiscal closure that keeps that path from drifting, and the consolidated net flows to firms, households and abroad.</p>
+          <p><strong>Taken as given:</strong> the tax bases, which come from the labour market, firm, household and energy chapters; and the policy rates themselves, which are inputs.</p>
+          <p>The rules are mechanical, which is not the same as neutral. Public consumption is a constant share of GDP, which is what a government holding the service level steady would do. Transfers follow wages with a lag, which is what statutory indexation does. These are conventions rather than estimated behaviour, so they would not hold through a change of policy regime. They also decide who ends up paying for a shock, which is why it is worth knowing which rules are in force before reading a result off the model.</p>
+          <p class="src">Chapter 4. Sections: Public revenue; Public expenditure and transfers; Public production; Net flows to the other sectors; Fiscal closure and sustainability.</p>
+        </div>
+      </details>
+
+      <details id="rest-of-the-world">
+        <summary><span class="no">5</span><span class="what">Rest of the world<span>Export demand, energy exports, import demand, the external balance and the trade elasticities</span></span><span class="mark" aria-hidden="true">&rsaquo;</span></summary>
+        <div class="body">
+          <p>The shortest chapter, and the one that disciplines the model's prices.</p>
+          <p>The economy is a price taker on imports: world prices are exogenous, so a domestic cost increase cannot be passed to foreign suppliers. It is not a price taker on exports, where it faces a demand curve that slopes down, so a cost increase is passed to foreign buyers and they buy less. The elasticity of that response is what turns a cost shock into a quantity shock, which makes it the parameter that sets the size of the real effects in any policy experiment.</p>
+          <p><strong>Decided here:</strong> export volumes, energy exports, and how much of domestic demand is met from abroad, cell by cell in the input-output table.</p>
+          <p><strong>Taken as given:</strong> domestic prices, world prices, the size of the export markets, and the level of domestic demand. The chapter decides only how much of that demand is imported.</p>
+          <p class="src">Chapter 5. Sections: Export demand; Energy exports; Import demand; The external balance and the trade elasticities.</p>
+        </div>
+      </details>
+
+      <details id="markets">
+        <summary><span class="no">6</span><span class="what">Markets and equilibrium<span>The input-output system, price setting and inflation, the labour market, energy markets and distributors, emissions and environmental accounts</span></span><span class="mark" aria-hidden="true">&rsaquo;</span></summary>
+        <div class="body">
+          <p>Where the pieces meet. The chapter takes the decisions of households, firms, government and the rest of the world, and imposes the conditions that make them consistent.</p>
+          <p>One correction at the outset, because much of the chapter follows from it. This is not a model where excess demand pushes prices up until the market balances. Exactly one price is attached to a market clearing condition, and it is the wage. Goods prices are markups over unit cost, import prices are world prices, and energy supply prices are exogenous by default. So when demand for an industry's output rises, the first response is a quantity response. Prices do move, but because costs move, not because anything is short. The loop is a cost loop, not a scarcity loop.</p>
+          <p><strong>Decided here:</strong> the clearing quantities, the wage and employment, the domestic price vector as one simultaneous system rather than a chain of markups, the national accounts aggregates, and total greenhouse gases, reported on both the national accounts and the UNFCCC conventions.</p>
+          <p>There is no unemployment rate. The employment gap measures employment against a structural benchmark. It is not the share of the labour force without work, and job search and participation are not modelled.</p>
+          <p class="src">Chapter 6. Sections: The input-output system; Price setting and inflation; The labour market; Energy markets and distributors; Emissions and environmental accounts.</p>
+        </div>
+      </details>
+
+      <details id="ces-and-indexing">
+        <summary><span class="no">A</span><span class="what">CES trees and smart indexing<span>The algebra the chapters use without deriving, and how a nesting tree becomes one group of equations</span></span><span class="mark" aria-hidden="true">&rsaquo;</span></summary>
+        <div class="body">
+          <p>Two halves. The first collects the algebra that Chapters 2 and 3 use without deriving it: the cost minimisation at one level of a nest, and what happens when levels are stacked.</p>
+          <p>The second is the more useful half for anyone working with the code. It explains how an entire nesting tree is written as a single group of equations, rather than one group per level. The device is not obvious on a first reading, and it is used in every module that contains a nest.</p>
+          <p>Read this with Chapter 1 if you are going to open the code. Between them they explain almost all of the notation.</p>
+          <p class="src">Appendix A. Sections: CES algebra within a level; Multiple levels; Smart indexing in the code; The same algebra elsewhere in the model; Calibration and numerical notes.</p>
+        </div>
+      </details>
+
+    </div>
 
     <div class="note" style="margin-top:28px">
-      <p><strong>Previous editions.</strong> Version 1.0 material from the Commission's TSI project stays available. When version 3.0 is published, 2.0 will move here rather than disappear.</p>
+      <p><strong>Previous editions.</strong> Version 1.0 material from the Commission's TSI project stays available. When a later version is published, 2.0 will move here rather than disappear.</p>
     </div>
 
   </div>
@@ -97,8 +174,8 @@
     <h2>Tell me when the documentation changes</h2>
     <p>One short email when a new edition, correction or user guide is published.</p>
     <form onsubmit="return false">
-      <label class="visually-hidden" for="email-docs">Work email</label>
-      <input id="email-docs" name="email" type="email" autocomplete="email" placeholder="Work email" />
+      <label class="visually-hidden" for="email-docs">Sign-up not available yet</label>
+      <input id="email-docs" name="email" type="email" autocomplete="email" placeholder="Sign-up not available yet" />
       <button type="submit">Subscribe</button>
     </form>
   </div>
@@ -123,9 +200,9 @@
         </ul>
       </div>
       <div>
-        <h3>DREAM</h3>
-        <p style="margin:0">Danish Research Institute for Economic Analysis and Modelling<br />
-        <a href="https://dreamgruppen.dk/">dreamgruppen.dk</a></p>
+        <h3 class="dreammark"><img src="assets/dream-wordmark-white.svg" alt="DREAM" width="145" height="26" /></h3>
+        <p class="nametag">Danish Research Institute for<br />Economic Analysis and Modelling</p>
+        <p style="margin:0"><a href="https://dreamgruppen.dk/">dreamgruppen.dk</a></p>
       </div>
     </div>
     <div class="legal">
@@ -136,6 +213,24 @@
     </div>
   </div>
 </footer>
+
+<script>
+/* Deep links. The sections work closed and without script; this only opens the
+   one named in the address, so documentation.html#firms lands on Chapter 3. */
+(function () {
+  function openTarget() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') {
+      el.open = true;
+      el.scrollIntoView();
+    }
+  }
+  openTarget();
+  window.addEventListener('hashchange', openTarget);
+})();
+</script>
 
 </body>
 </html>

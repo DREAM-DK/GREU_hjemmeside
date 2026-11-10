@@ -28,7 +28,7 @@
 <div class="sheet gridpaper">
   <p class="kicker">Proposed structure</p>
   <h1>GreenREFORM-EU &mdash; sitemap</h1>
-  <p class="lead">Seven pages in the primary navigation. Applications is a hub holding three kinds of object: analyses, projects and country teams.</p>
+  <p class="lead">Seven pages in the primary navigation. Applications is a hub holding two kinds of object: analyses and projects.</p>
 
   <div id="diagram"></div>
 
@@ -37,14 +37,13 @@
     <ul>
       <li><strong>Home</strong> &ndash; the model
         <ul>
-          <li><strong>Documentation</strong> &ndash; how to read it, contents, download. Holds the PDF or HTML document and the LaTeX source in the repository.</li>
-          <li><strong>User guide</strong> &ndash; install, calibrate, run a shock.</li>
+          <li><strong>Documentation</strong> &ndash; how to read it, contents, download. Holds the PDF of the documentation.</li>
+          <li><strong>User guide</strong> &ndash; install, calibrate, run a shock. A holding page at launch; the guide is added later.</li>
           <li><strong>Get the model</strong> &ndash; open source. Holds the repository of GAMS and Python, and the licence and data terms.</li>
-          <li><strong>Applications</strong> &ndash; a hub holding three kinds of object.
+          <li><strong>Applications</strong> &ndash; a hub holding two kinds of object.
             <ul>
-              <li><strong>Analyses</strong>, filtered by policy question. Each analysis record states what was scored, the model version, the data, the limits, and links the PDF.</li>
-              <li><strong>Projects</strong>, which explain who funded the work: TSI 2024, KR Foundation 2.0, the new TSI, Viet Nam.</li>
-              <li><strong>Country teams</strong>, which explain who is calibrating: Austria, Belgium, Finland, Italy.</li>
+              <li><strong>Analyses</strong>, newest first; a filter by policy question is added when there are enough to filter. Each analysis record states what was scored, the model version, the data, the limits, and links the PDF.</li>
+              <li><strong>Projects</strong>, which explain who funded the work. Two built the model: TSI 2024, KR Foundation 2.0. Four use it: Viet Nam, FinReform, Belgium, Faroe Islands.</li>
             </ul>
           </li>
           <li><strong>News</strong> &ndash; dated items, and the newsletter signup.</li>
@@ -55,9 +54,9 @@
   </details>
 
   <div class="notes">
-    <p><strong>Analyses</strong> is where a researcher or official starts: has anyone scored a question like mine? Projects and country teams are the map around it.</p>
+    <p><strong>Analyses</strong> is where a researcher or official starts: has anyone scored a question like mine? Projects are the map around it.</p>
     <p><strong>News</strong> announces a paper. The analysis record keeps it. Newsletter signup repeats in the footer of every page.</p>
-    <p><strong>No page per documentation chapter.</strong> The document itself is the artefact, offered as PDF, HTML and source.</p>
+    <p><strong>No page per documentation chapter.</strong> The document itself is the artefact, offered as a PDF.</p>
   </div>
 </div>
 
@@ -65,24 +64,20 @@
 (function () {
   var D = [
     { t: 'Documentation', s: 'How to read it, contents, download', k: [
-      { t: 'PDF / HTML document' },
-      { t: 'LaTeX source in the repository' }
+      { t: 'PDF document' }
     ] },
-    { t: 'User guide', s: 'Install, calibrate, run a shock' },
+    { t: 'User guide', s: 'Holding page at launch' },
     { t: 'Get the model', s: 'Open source', k: [
       { t: 'Repository: GAMS + Python' },
       { t: 'Licence and data terms' }
     ] },
-    { t: 'Applications', s: 'Hub: three kinds of object', k: [
-      { t: 'Analyses', s: 'Filter by policy question', k: [
+    { t: 'Applications', s: 'Hub: two kinds of object', k: [
+      { t: 'Analyses', s: 'Newest first; filter added later', k: [
         { t: 'Analysis record', s: 'What was scored, version, data, limits, PDF' }
       ] },
-      { t: 'Projects', s: 'Who funded the work', k: [
-        { t: 'TSI 2024 \u00b7 KR Foundation 2.0', s: 'New TSI \u00b7 Viet Nam' }
+      { t: 'Projects', s: 'Who funded the work, and who built the model as against who uses it', k: [
+        { t: 'Six projects', s: 'TSI 2024 \u00b7 KR Foundation 2.0 \u00b7 Viet Nam \u00b7 FinReform \u00b7 Belgium \u00b7 Faroe Islands' }
       ] },
-      { t: 'Country teams', s: 'Who is calibrating', k: [
-        { t: 'Austria \u00b7 Belgium', s: 'Finland \u00b7 Italy' }
-      ] }
     ] },
     { t: 'News', s: 'Dated items', k: [
       { t: 'News items' },
@@ -106,7 +101,7 @@
     c.y = (c.k[0].y + c.k[c.k.length - 1].y) / 2;
   });
 
-  var root = { t: 'greenreform-eu', s: 'Home \u00b7 The model', y: (D[0].y + D[D.length - 1].y) / 2 };
+  var root = { t: 'greenreform-eu', s: 'Home \u00b7 Overview', y: (D[0].y + D[D.length - 1].y) / 2 };
   var H = rows * RH + 14;
   var conns = [], boxes = [];
 
@@ -175,7 +170,7 @@
     "' xmlns='http://www.w3.org/2000/svg' role='img' aria-labelledby='map-t map-d'>" +
     "<title id='map-t'>GreenREFORM-EU sitemap</title>" +
     "<desc id='map-d'>Seven pages in the primary navigation. Applications is a hub " +
-    "holding analyses, projects and country teams. The same structure is written " +
+    "holding analyses and projects. The same structure is written " +
     "out as a list below the diagram.</desc>" +
     conns.join('') + boxes.join('') + "</svg>";
 })();

@@ -1,14 +1,11 @@
-# Layout mockups - with the graphic system
+# Layout mockups
 
-The same nine pages as [../mockups](../mockups), the same copy, and the same
-Direction 05 palette. The difference is that this set uses the **connected
-discs** and the **squared grid** from the brand lab, instead of leaving the
-pages plain.
+Clickable pages for GreenREFORM-EU, using Direction 05 and the **connected
+discs** and **squared grid** from the brand lab. This is not the GoBasic theme.
 
-Put the two side by side to decide how much graphic the site should carry.
-Neither is the GoBasic theme.
-
-**To view:** double-click `index.html`.
+**To view:** double-click `index.html`. The navigation works, so you can click
+through the pages in a browser. Nothing is live: buttons, downloads and the
+newsletter form do nothing.
 
 ## Where the graphic comes from
 
@@ -41,9 +38,9 @@ simply runs out and the page continues. The signup band is the exception. It
 has its own colour and its own rules top and bottom, so its edge is deliberate
 and the grid stays even across it.
 
-The five colours and the rule that green is never decoration carry over
-unchanged from `../mockups`. The grid is mist, the quiet discs are mist, and
-the only green on a page is still the model or a link.
+The five colours and the rule that green is never decoration are in
+`assets/site.css`. The grid is mist, the quiet discs are mist, and the only
+green on a page is still the model or a link.
 
 ## What the pages do differently
 
@@ -52,20 +49,23 @@ the only green on a page is still the model or a link.
  honest version of the claim: MAKRO, then Gr&oslash;nREFORM, then this model.
 - **Interior pages** have a page head band on squared paper, with the quiet
  constellation fading in from the right.
-- **Country teams** on Applications use the disc-and-type component from
- `brand-lab/boards/05c-dream-heritage-applications.html`: the disc is never
- modified, never re-coloured, and never has anything added to it. What a
- country needs to say is said in type beside it.
+- **The disc is never modified**, never re-coloured, and never has anything
+ added to it. What a country, a version or a project needs to say is said in
+ type beside it. The disc-and-type component that showed this on Applications
+ went with the Country teams directory, parked on 3 November 2026
+ (`../content/parked/country-teams.md`); it is still drawn on sheet
+ `brand-lab/boards/05c-dream-heritage-applications.html`.
 - **The signup band** and the **sitemap** sit on squared paper.
 
 ## Open questions this raises
 
 1. **The green country pill.** Sheet 05c gives country teams a green-tinted
  pill. Sheet 05d says green means the model or a link, and a country name is
- neither. Both are Direction 05. One of them has to give.
+ neither. Both are Direction 05. One of them has to give. Not urgent while
+ the Country teams directory is parked, but settle it before restoring.
 2. **Quoting DREAM's colours.** The family graphic reproduces the DREAM,
- MAKRO, REFORM, SMILE and Gr&oslash;nREFORM disc colours. They are DREAM's,
- read off dreamgruppen.dk. Showing them on the GreenREFORM-EU site is a
+ MAKRO, REFORM, SMILE and Gr&oslash;nREFORM disc colours. They now match
+ DREAM's own logo files exactly. Showing them on the GreenREFORM-EU site is a
  statement about the relationship between the models and needs DREAM's
  agreement, not just a designer's.
 3. **How often the family may appear.** It is used twice here. More than that
@@ -83,8 +83,11 @@ user-guide.html          User guide
 get-the-model.html       Get the model
 applications.html        Applications
 analysis-tsi-paper.html  One analysis record
+project-tsi-2024.html    One project page (TSI 2024)
+project-version-2-0.html One project page (Version 2.0)
 news.html                News
 about.html               About
+accessibility.html       Accessibility statement (footer, not nav)
 sitemap.html             Sitemap diagram, not a site page
 assets/site.css          Direction 05 theme, plus the graphic system
 assets/family.svg        The connected discs, in the family colours
@@ -96,14 +99,42 @@ assets/favicon.svg       The initial, for sizes below the floor
 ## Screenshots
 
 `screenshots/` holds flat images for slides, email and print. Each is 3720 px
-wide: the 1240 px page rendered at three times scale. Ten pages here, against
-eight in `../mockups`, because About and the user guide now carry graphics
-worth showing.
+wide: the 1240 px page rendered at three times scale.
 
-Regenerate as in [../mockups/README.md](../mockups/README.md). Page heights at
-1240 px wide: sitemap 1242, home 2674, documentation 2198, get the model 1825,
-applications 2921, news 1772, analysis 1832, about 2062, user guide 1632,
-accessibility 2870.
+**This is a dated snapshot, not a mirror of the pages.** It was last refreshed
+on 3 November 2026 and is no longer regenerated as a matter of course. It
+covers ten of the fifteen pages. The five project pages — TSI 2024,
+Version 2.0, Viet Nam, FinReform and Belgium — have no image here at all.
+Before pasting one into a deck, check it against the page.
+
+To regenerate, render the file with headless Chrome:
+
+```
+chrome --headless=new --disable-gpu --hide-scrollbars --no-first-run ^
+  --user-data-dir=%TEMP%\shot-profile --force-device-scale-factor=3 ^
+  --window-size=1240,3000 --virtual-time-budget=5000 ^
+  --screenshot=%TEMP%\raw.png "<full path to the .html file>"
+```
+
+Chrome takes a plain Windows path as the last argument and handles the
+non-ASCII folder names, so there is no need to copy the site to a temp folder
+first.
+
+Render tall — 3000 is above every page — and crop afterwards rather than
+trying to set the exact page height. A fixed height per page is a maintenance
+trap: it goes stale the moment any copy changes, and too small crops the
+footer while too large adds paper-coloured space below it. To find the real
+bottom, scan up from the last row of the raw image for the first row that is
+dark at x = 0, w/3, w/2 and w-1; that is the foot of the dark footer. Crop
+there. `sitemap.html` is the exception, as it has no dark footer, so give it a
+fixed 3726.
+
+Two traps. `--virtual-time-budget` gives the Hind web font time to arrive:
+without a network connection Chrome falls back to Segoe UI and the screenshots
+stop matching the pages as served. And Chrome writes progress to stderr, which
+PowerShell turns into a terminating `NativeCommandError` under
+`$ErrorActionPreference = 'Stop'`, so wrap the call in `'Continue'` and pipe
+`2>&1` to `Out-Null`.
 
 ## Accessibility
 

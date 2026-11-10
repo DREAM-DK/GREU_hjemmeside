@@ -117,12 +117,19 @@ summary:focus-visible, [tabindex]:focus-visible {
   gap: 22px;
 }
 
+/* DREAM's own wordmark, the artwork dreamgruppen.dk carries in its footer.
+   It keeps DREAM's grey instead of the site ink: this is the parent
+   institution signing the page, not site furniture. The width is set so the
+   letterforms match the cap height of the site name beside them. */
 .dreamword {
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--ink);
+  display: flex;
   text-decoration: none;
+}
+
+.dreamword img {
+  display: block;
+  width: 111px;
+  height: auto;
 }
 
 .vrule {
@@ -143,15 +150,6 @@ summary:focus-visible, [tabindex]:focus-visible {
 }
 
 .disc { display: block; }
-
-.utility {
-  display: flex;
-  gap: 18px;
-  font-size: 14px;
-}
-
-.utility a { text-decoration: none; }
-.utility a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- primary navigation ---------- */
 
@@ -231,6 +229,16 @@ p { margin: 0 0 16px; }
   line-height: 1.5;
   max-width: 62ch;
   color: var(--ink-soft);
+}
+
+/* A second line to a title, for documents whose own title needs context. */
+.subtitle {
+  margin: -6px 0 18px;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--ink-soft);
+  max-width: 40ch;
 }
 
 .measure { max-width: 68ch; }
@@ -340,6 +348,15 @@ p { margin: 0 0 16px; }
   color: var(--ink-soft);
 }
 
+/* Unused since 3 November 2026. Both were on the Projects grid, where they
+   marked one project new and one a model version while the other four stayed
+   grey, for no reason a reader could recover. Clay also stopped carrying the
+   word "new" once the tags took the period-and-funder pattern, which left the
+   colour as the only carrier of the meaning and broke WCAG 1.4.1.
+
+   If you use .tag.new again, the tag text must itself say NEW. Nothing here
+   should rely on a reader noticing a colour, and nothing should depend on a
+   date to stay true: "new" expires and no process catches it. */
 .tag.new { background: var(--clay-tint); color: var(--clay); }
 .tag.version { background: var(--green-tint); color: var(--green); }
 
@@ -353,29 +370,52 @@ p { margin: 0 0 16px; }
 ul.plain, ol.plain { padding-left: 22px; margin: 0 0 16px; }
 ul.plain li, ol.plain li { margin-bottom: 10px; }
 
-ol.toc {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* The documentation chapters are unfoldable sections on one page, not
+   sub-pages. The reasoning is in content/pages/documentation.md. The closed
+   state must read as a table of contents, because that is what it was. */
+.toc {
   border-top: 1px solid var(--line-firm);
+  margin: 0;
 }
 
-ol.toc li {
+.toc details { border-bottom: 1px solid var(--line-firm); }
+
+.toc summary {
   display: flex;
   gap: 16px;
   padding: 14px 2px;
-  border-bottom: 1px solid var(--line-firm);
+  cursor: pointer;
+  list-style: none;
 }
 
-ol.toc .no {
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::marker { content: ""; }
+
+.toc .no {
   width: 2.2rem;
   flex: none;
   color: var(--ink-soft);
   font-variant-numeric: tabular-nums;
 }
 
-ol.toc .what { margin: 0; }
-ol.toc .what span { display: block; color: var(--ink-soft); font-size: 15px; }
+.toc .what { margin: 0; }
+.toc .what span { display: block; color: var(--ink-soft); font-size: 15px; }
+
+/* Decorative. The open and closed states are carried by the summary element
+   itself, which assistive technology announces without help. */
+.toc .mark {
+  margin-left: auto;
+  flex: none;
+  color: var(--ink-soft);
+  transition: transform .15s ease;
+}
+
+.toc details[open] .mark { transform: rotate(90deg); }
+
+.toc .body { padding: 0 2px 22px calc(2.2rem + 16px); }
+.toc .body p { margin: 0 0 12px; max-width: 62ch; }
+.toc .body p:last-child { margin-bottom: 0; }
+.toc .body .src { font-size: 14px; color: var(--ink-soft); }
 
 .newsfeed { list-style: none; margin: 0; padding: 0; }
 
@@ -456,6 +496,7 @@ ol.toc .what span { display: block; color: var(--ink-soft); font-size: 15px; }
 .analysis h3 { margin: 0 0 6px; font-size: 20px; }
 .analysis h3 a { color: var(--ink); text-decoration: none; }
 .analysis h3 a:hover { color: var(--green); text-decoration: underline; }
+.analysis .subtitle { margin: -2px 0 8px; font-size: 16px; }
 .analysis .aside { font-size: 15px; color: var(--ink-soft); }
 .analysis .aside p { margin: 0 0 8px; }
 .analysis .aside p:last-child { margin-bottom: 0; }
@@ -547,6 +588,17 @@ footer.site .cols {
 }
 
 footer.site h3 { color: #fff; font-size: 15px; margin-bottom: 10px; font-weight: 600; }
+
+/* DREAM's own footer lockup: the wordmark with the institute's full name set
+   beneath it. dreamgruppen.dk builds it the same way, from the logo file plus
+   live text rather than the print pack's outlined version, so the name stays
+   selectable and scales with the reader's type size. The logo is DREAM's white
+   file because this band is dark. Its ink is about 1.75 times the name's font
+   size, which is the ratio dreamgruppen.dk uses. The name carries an explicit
+   break after "for", which is where DREAM's own two-line lockup breaks it. */
+footer.site .dreammark { margin-bottom: 12px; }
+footer.site .dreammark img { display: block; width: 145px; height: auto; }
+footer.site .nametag { color: #fff; font-weight: 600; margin: 0 0 8px; }
 footer.site a { color: #DCE3DD; }
 footer.site ul { list-style: none; margin: 0; padding: 0; }
 footer.site li { margin-bottom: 6px; }
@@ -666,35 +718,8 @@ footer.site .legal a { color: #BFC9C2; }
   max-width: 76ch;
 }
 
-/* Country teams: the disc is never modified, never re-coloured and never has
-   anything added to it. What a country needs to say is said in type beside
-   it. Component from brand-lab/boards/05c-dream-heritage-applications.html. */
-
-.ccards { display: grid; gap: 12px; }
-
-.ccard {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  padding: 14px 18px;
-}
-
-.ccard img { display: block; flex: none; }
-.ccard .nm { font-size: 16px; font-weight: 600; }
-.ccard .meta { font-size: 13.5px; color: var(--ink-soft); margin-top: 1px; max-width: 68ch; }
-
-.ccard .pill {
-  margin-left: auto;
-  background: var(--green-tint);
-  color: var(--green);
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-}
+/* The .ccard component for the Country teams directory was parked on
+   3 November 2026, with its CSS: see content/parked/country-teams.md. */
 
 .signup { background-color: var(--mist); }
 
@@ -719,14 +744,13 @@ footer.site .legal a { color: #BFC9C2; }
 @media (max-width: 760px) {
   h1 { font-size: 30px; }
   .lead { font-size: 18px; }
+  .subtitle { font-size: 19px; }
   .split { grid-template-columns: 1fr; }
   .analysis { grid-template-columns: 1fr; }
   .masthead .wrap { flex-wrap: wrap; }
   .brand { gap: 14px; }
-  .dreamword { font-size: 20px; }
+  .dreamword img { width: 86px; }
   .sitename { font-size: 17px; }
-  .ccard { flex-wrap: wrap; }
-  .ccard .pill { margin-left: 0; }
 }
 
 /* WCAG 1.4.10 Reflow. Everything has to read in a 320 px column with no
@@ -736,7 +760,6 @@ footer.site .legal a { color: #BFC9C2; }
   h1 { font-size: 26px; }
   .vrule { display: none; }
   .brand { flex-wrap: wrap; gap: 8px 14px; }
-  .utility { gap: 14px; }
   .btn, .btn-ghost { width: 100%; justify-content: center; }
   .meta-table, .meta-table tbody, .meta-table tr, .meta-table th, .meta-table td { display: block; width: auto; }
   .meta-table th { border-bottom: 0; padding-bottom: 0; }

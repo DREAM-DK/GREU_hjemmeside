@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="184" height="184" viewBox="0 0 184 184" role="img" aria-label="GreenREFORM-EU">
-  <desc>Favicon variant. Below about 56 px the three lines of lettering turn to mush, so sheet 05b uses the initial instead.</desc>
-  <circle cx="92" cy="92" r="92" fill="#10693A"/>
-  <text x="92" y="118" fill="#FFFFFF" font-family="Bahnschrift Light, Bahnschrift, Eurostile, Aldrich, Segoe UI, Arial, sans-serif" font-weight="300" font-size="86" text-anchor="middle">G</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="184" height="184" viewBox="0 0 283.46 283.46" role="img" aria-label="GreenREFORM-EU">
+  <desc>Favicon variant. Below about 56 px the three lines of lettering turn to
+mush, so sheet 05b uses the initial instead. The G is the G of DREAM's own
+Modellogo_GREEN_REFORM_100mm_RGB.svg, unaltered, scaled up and centred.</desc>
+  <circle cx="141.73" cy="141.73" r="141.73" fill="#10693A"/>
+  <g fill="#FFFFFF" transform="translate(141.73,141.73) scale(4.9075) translate(-45.715,-124.12)">
+    <path d="M54.78,114.43a.79.79,0,0,1,.88.78.75.75,0,0,1-.74.77H38.58a1.31,1.31,0,0,0-1.27,1.34v13.8a1.19,1.19,0,0,0,1.26,1.22H52.84a1.21,1.21,0,0,0,1.27-1.22v-4.75A1.26,1.26,0,0,0,52.79,125H46a.73.73,0,0,1-.69-.77.72.72,0,0,1,.69-.76h6.77a2.82,2.82,0,0,1,2.87,2.86v4.75a2.78,2.78,0,0,1-2.75,2.77H38.58a2.82,2.82,0,0,1-2.81-2.77v-13.8a2.9,2.9,0,0,1,2.81-2.89Z"/>
+  </g>
 </svg>
