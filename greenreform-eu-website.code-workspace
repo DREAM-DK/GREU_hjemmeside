@@ -1,0 +1,69 @@
+{
+	"folders": [
+		{
+			"name": "Website",
+			"path": "."
+		},
+		{
+			"name": "Documentation (FinalVersion)",
+			"path": "../Dokumentationsnotat/FinalVersion"
+		},
+		{
+			"name": "Background material",
+			"path": "../Dokumentationsnotat/Background material"
+		}
+	],
+	"settings": {
+		"editor.tabSize": 2,
+		"editor.rulers": [100],
+		"search.useIgnoreFiles": true,
+		"files.readonlyInclude": {
+			"**/greu_*.tex": true,
+			"**/greu_*.pdf": true,
+			"**/preamble.tex": true,
+			"**/greu_endnotes_EN.tex": true,
+			"**/greu_references_v1_EN.tex": true,
+			"**/outstanding_issues.md": true,
+			"**/revision_report.md": true,
+			"**/red_markers_inventory.md": true,
+			"**/*.pdf": true,
+			"**/*.xlsx": true
+		},
+		"search.exclude": {
+			"**/*.aux": true,
+			"**/*.log": true,
+			"**/*.out": true,
+			"**/*.toc": true,
+			"**/*.fls": true,
+			"**/*.fdb_latexmk": true,
+			"**/*.synctex.gz": true,
+			"**/backup_*/**": true,
+			"**/_agent_results/**": true
+		},
+		"files.watcherExclude": {
+			"**/*.aux": true,
+			"**/*.log": true,
+			"**/*.out": true,
+			"**/*.toc": true,
+			"**/*.fls": true,
+			"**/*.fdb_latexmk": true,
+			"**/backup_*/**": true,
+			"**/_agent_results/**": true
+		},
+		"files.associations": {
+			"*.tex": "latex"
+		},
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#5CD272",
+			"titleBar.activeForeground": "#000000",
+			"titleBar.inactiveBackground": "#5CD272",
+			"titleBar.inactiveForeground": "#000000"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"james-yu.latex-workshop",
+			"yzhang.markdown-all-in-one"
+		]
+	}
+}

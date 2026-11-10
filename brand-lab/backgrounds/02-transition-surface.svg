@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="field" x1="0" y1="1" x2="1" y2=".2">
+      <stop offset="0" stop-color="#071d3b"/>
+      <stop offset=".45" stop-color="#075e7b"/>
+      <stop offset=".68" stop-color="#00a69b"/>
+      <stop offset="1" stop-color="#c8f43d"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbfcf8"/>
+      <stop offset="1" stop-color="#e9eee8"/>
+    </linearGradient>
+    <path id="ridge" d="M-80 885C205 760 325 835 560 680S875 582 1080 460 1430 330 2000 70"/>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#paper)"/>
+  <path d="M-80 885C205 760 325 835 560 680S875 582 1080 460 1430 330 2000 70V1100H-80Z" fill="url(#field)"/>
+  <g fill="none" stroke-linecap="round">
+    <use href="#ridge" stroke="#071d3b" stroke-width="4"/>
+    <use href="#ridge" stroke="#075e7b" stroke-width="3" transform="translate(0 -34)"/>
+    <use href="#ridge" stroke="#008b91" stroke-width="3" transform="translate(0 -68)"/>
+    <use href="#ridge" stroke="#48c883" stroke-width="2.5" transform="translate(0 -102)"/>
+    <use href="#ridge" stroke="#8cdd58" stroke-width="2" transform="translate(0 -136)"/>
+    <use href="#ridge" stroke="#b8ef35" stroke-width="2" transform="translate(0 -170)"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-opacity=".22">
+    <path d="M0 960C250 820 400 900 620 740S940 650 1150 520 1490 385 1920 180"/>
+    <path d="M0 1010C270 875 420 950 650 795S960 705 1175 580 1500 440 1920 250"/>
+  </g>
+  <circle cx="1080" cy="460" r="11" fill="#fff"/>
+  <circle cx="1080" cy="460" r="29" fill="none" stroke="#fff" stroke-opacity=".55"/>
+</svg>

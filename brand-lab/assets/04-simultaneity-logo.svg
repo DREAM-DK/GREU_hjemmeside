@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="240" viewBox="0 0 1080 240" role="img" aria-labelledby="t d">
+  <title id="t">GreenREFORM-EU - Simultaneity logo</title>
+  <desc id="d">The equation system as the mark: two blocks, one coupling cell, solved at once.</desc>
+  <defs>
+    <clipPath id="tile"><rect width="184" height="184" rx="40"/></clipPath>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#19E3A7" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#19E3A7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(30 28)" clip-path="url(#tile)">
+    <rect width="184" height="184" fill="#0C1116"/>
+    <circle cx="92" cy="92" r="58" fill="url(#glow)"/>
+    <g fill="#1B2733">
+      <rect x="24" y="24" width="16" height="16" rx="3"/><rect x="44" y="24" width="16" height="16" rx="3"/><rect x="64" y="24" width="16" height="16" rx="3"/><rect x="84" y="24" width="16" height="16" rx="3"/><rect x="104" y="24" width="16" height="16" rx="3"/><rect x="124" y="24" width="16" height="16" rx="3"/><rect x="144" y="24" width="16" height="16" rx="3"/>
+      <rect x="24" y="44" width="16" height="16" rx="3"/><rect x="44" y="44" width="16" height="16" rx="3"/><rect x="64" y="44" width="16" height="16" rx="3"/><rect x="84" y="44" width="16" height="16" rx="3"/><rect x="104" y="44" width="16" height="16" rx="3"/><rect x="124" y="44" width="16" height="16" rx="3"/><rect x="144" y="44" width="16" height="16" rx="3"/>
+      <rect x="24" y="64" width="16" height="16" rx="3"/><rect x="44" y="64" width="16" height="16" rx="3"/><rect x="64" y="64" width="16" height="16" rx="3"/><rect x="104" y="64" width="16" height="16" rx="3"/><rect x="124" y="64" width="16" height="16" rx="3"/><rect x="144" y="64" width="16" height="16" rx="3"/>
+      <rect x="24" y="84" width="16" height="16" rx="3"/><rect x="44" y="84" width="16" height="16" rx="3"/><rect x="124" y="84" width="16" height="16" rx="3"/><rect x="144" y="84" width="16" height="16" rx="3"/>
+      <rect x="24" y="104" width="16" height="16" rx="3"/><rect x="44" y="104" width="16" height="16" rx="3"/><rect x="64" y="104" width="16" height="16" rx="3"/>
+      <rect x="24" y="124" width="16" height="16" rx="3"/><rect x="44" y="124" width="16" height="16" rx="3"/><rect x="64" y="124" width="16" height="16" rx="3"/><rect x="84" y="124" width="16" height="16" rx="3"/>
+      <rect x="24" y="144" width="16" height="16" rx="3"/><rect x="44" y="144" width="16" height="16" rx="3"/><rect x="64" y="144" width="16" height="16" rx="3"/><rect x="84" y="144" width="16" height="16" rx="3"/>
+    </g>
+    <g fill="#2D2BE0">
+      <rect x="24" y="24" width="16" height="16" rx="3"/><rect x="44" y="24" width="16" height="16" rx="3"/><rect x="64" y="24" width="16" height="16" rx="3"/>
+      <rect x="24" y="44" width="16" height="16" rx="3"/><rect x="44" y="44" width="16" height="16" rx="3"/><rect x="64" y="44" width="16" height="16" rx="3"/>
+      <rect x="24" y="64" width="16" height="16" rx="3"/><rect x="44" y="64" width="16" height="16" rx="3"/><rect x="64" y="64" width="16" height="16" rx="3"/>
+    </g>
+    <g fill="#F1EEE6">
+      <rect x="104" y="104" width="16" height="16" rx="3"/><rect x="124" y="104" width="16" height="16" rx="3"/><rect x="144" y="104" width="16" height="16" rx="3"/>
+      <rect x="104" y="124" width="16" height="16" rx="3"/><rect x="124" y="124" width="16" height="16" rx="3"/><rect x="144" y="124" width="16" height="16" rx="3"/>
+      <rect x="104" y="144" width="16" height="16" rx="3"/><rect x="124" y="144" width="16" height="16" rx="3"/><rect x="144" y="144" width="16" height="16" rx="3"/>
+    </g>
+    <g fill="#19E3A7">
+      <rect x="84" y="84" width="16" height="16" rx="3"/>
+      <rect x="64" y="84" width="16" height="16" rx="3" opacity=".42"/>
+      <rect x="84" y="64" width="16" height="16" rx="3" opacity=".42"/>
+      <rect x="104" y="84" width="16" height="16" rx="3" opacity=".42"/>
+      <rect x="84" y="104" width="16" height="16" rx="3" opacity=".42"/>
+    </g>
+  </g>
+  <g font-family="Space Grotesk, Bahnschrift, Aptos, Segoe UI, Arial, sans-serif">
+    <text x="250" y="112" font-size="66" font-weight="700" letter-spacing="-1.5" fill="#0C1116">GreenREFORM-EU</text>
+    <text x="253" y="158" font-size="21" font-weight="500" letter-spacing="3.4" fill="#4C5A66" font-family="IBM Plex Mono, Consolas, Cascadia Mono, monospace">ONE SYSTEM, SOLVED AT ONCE</text>
+  </g>
+</svg>
