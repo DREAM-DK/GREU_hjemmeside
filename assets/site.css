@@ -241,6 +241,32 @@ p { margin: 0 0 16px; }
   max-width: 40ch;
 }
 
+/* EU emblem on EU-funded project pages. Grant Article 17.2: unmodified, with
+   clear space, and at least as prominent as any other logo on the page. */
+.pagehead-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+.eu-emblem, .funder-logo { margin: 4px 0 0; flex: none; }
+.eu-emblem img, .funder-logo img { display: block; height: 56px; width: auto; }
+@media (max-width: 760px) {
+  .pagehead-title { flex-direction: column; gap: 0; }
+  .eu-emblem, .funder-logo { margin: 0 0 18px; }
+}
+
+/* The funding statement and disclaimer the grant prescribes (Article 17.3). */
+.funding {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-firm);
+  font-size: 14px;
+  color: var(--ink-soft);
+  max-width: 80ch;
+}
+.funding p { margin: 0; }
+
 .measure { max-width: 68ch; }
 
 .muted { color: var(--ink-soft); }

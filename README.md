@@ -103,8 +103,9 @@ wide: the 1240 px page rendered at three times scale.
 
 **This is a dated snapshot, not a mirror of the pages.** It was last refreshed
 on 3 November 2026 and is no longer regenerated as a matter of course. It
-covers ten of the fifteen pages. The five project pages — TSI 2024,
-Version 2.0, Viet Nam, FinReform and Belgium — have no image here at all.
+covers ten of the seventeen pages. The seven project pages — TSI 2024,
+TSI 2026, Version 2.0, Viet Nam, FinReform, Belgium and Faroe Islands — have
+no image here at all.
 Before pasting one into a deck, check it against the page.
 
 To regenerate, render the file with headless Chrome:

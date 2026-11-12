@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Economic Analysis for Climate Action 2 (TSI 2026) | Projects</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand">
+      <a class="dreamword" href="https://dreamgruppen.dk/"><img src="assets/dream-wordmark.svg" alt="DREAM" width="111" height="20" /></a>
+      <span class="vrule"></span>
+      <a class="sitename" href="index.html"><img class="disc" src="assets/mark.svg" alt="" width="56" height="56" />GreenREFORM-EU</a>
+    </div>
+  </div>
+</header>
+
+<nav class="main" aria-label="Primary">
+  <div class="wrap">
+    <a href="index.html">Overview</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="user-guide.html">User guide</a>
+    <a href="get-the-model.html">Get the model</a>
+    <a href="applications.html" aria-current="page">Applications</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<div class="pagehead gridpaper">
+  <div class="wrap">
+    <p class="crumb"><a href="applications.html">Applications</a> / Projects</p>
+    <p class="kicker">2026 &ndash; 2029 &middot; European Commission</p>
+    <div class="pagehead-title">
+      <h1>Economic Analysis for Climate Action 2: GreenREFORM-EU in 18 Member States</h1>
+      <p class="eu-emblem"><img src="assets/eu-funded-by-the-eu.png" alt="Funded by the European Union" width="251" height="56" /></p>
+    </div>
+    <p class="lead">From October 2026 to January 2029 the European Commission funds DREAM to bring GreenREFORM-EU to 18 Member States. The project trains national teams, moves the code to the open-source language Julia, automates the supply of Eurostat data and builds new sectoral sub-models for the sectors the countries ask for.</p>
+    <div class="actions">
+      <a class="btn" href="https://reforms-investments.ec.europa.eu/technical-support-instrument-0/revenue-administration-and-public-financial-management/economic-analysis-climate-action_en">Commission project page</a>
+      <a class="btn-ghost" href="documentation.html">Model documentation</a>
+    </div>
+  </div>
+</div>
+
+  <div class="wrap">
+
+    <div class="split">
+      <div>
+        <h2 style="margin-top:0">Why it was set up</h2>
+        <p class="measure">The amended Directive 2011/85/EU on national budgetary frameworks asks Member States to assess and report the macro-fiscal effects of climate change and climate policy. Many ministries lack the tools, the data and the staff to do it. Their work tends to cover single aspects. Climate risk is still rarely part of forecasts and budget plans.</p>
+        <p class="measure">The TSI 2024 project built GreenREFORM-EU for five institutions. It showed that collecting data by hand was the main delay for national teams. Eighteen Member States asked the Commission for further support.</p>
+
+        <h2>What it is part of</h2>
+        <p class="measure">The Commission project is called Economic Analysis for Climate Action. It has three pillars:</p>
+        <ol class="measure">
+          <li>The GreenREFORM-EU model and similar models.</li>
+          <li>Analytical tools for macro-fiscal impacts, nature-related risks and the costs of climate events.</li>
+          <li>Integrating climate risk into fiscal and budgetary planning.</li>
+        </ol>
+        <p class="measure">DREAM&rsquo;s grant covers the first pillar. This page describes that part only.</p>
+
+        <h2>What it sets out to do</h2>
+        <ol class="measure">
+          <li>Deliver a fully functional, open-source GreenREFORM-EU model in Julia, with technical documentation, a user guide and server access.</li>
+          <li>Give national teams a three-day introduction seminar, online training, country visits and a final workshop.</li>
+          <li>Build an automated Eurostat data pipeline, and a standard interface for countries that run their own energy-system models.</li>
+          <li>Build a benchmark technology data set and guidelines for a common EU technology data set.</li>
+          <li>Design, code, calibrate and hand over one or two new sectoral sub-models.</li>
+        </ol>
+
+        <h2>What the project does</h2>
+        <ul class="plain measure">
+          <li><strong>Code and model.</strong> The code moves from a mix of Python, GAMS and gamY to Julia, before the new teams start. A GAMS licence is then no longer needed. A solver licence is still needed. DREAM keeps the model, the documentation and the user guide up to date during the project.</li>
+          <li><strong>Server.</strong> Designated staff in each Member State get restricted access to a Linux server hosted by the Technical University of Denmark. The project provides the solver licence.</li>
+          <li><strong>Training.</strong> A joint three-day seminar in Copenhagen. Online training with exercises. A two-day visit by DREAM experts to each country in the introduction track. A final joint two-day workshop on the new sub-models.</li>
+          <li><strong>Data.</strong> An automated pipeline that imports Eurostat input-output tables, sector accounts and emissions and prepares them for the model. DREAM also publishes calibration guidelines and a paper that calibrates the model to Danish data as a worked example.</li>
+          <li><strong>Technology data.</strong> A benchmark technology data set for Denmark, with costs, energy mix, capital intensity and emission-reduction potential. It is the blueprint for a common EU technology data set, which an external provider builds.</li>
+          <li><strong>Energy-system models.</strong> GreenREFORM-EU solves its energy technology model and the macroeconomy together. Some countries also keep their own energy-system models. The project designs a standard interface so that they can exchange baseline scenarios with GreenREFORM-EU, and tests it with one country.</li>
+          <li><strong>New sub-models.</strong> One or two sectoral sub-models. The countries decide the scope during the project.</li>
+          <li><strong>Technical report.</strong> A final report on the Danish benchmark calibration, with examples from other countries where possible, and with policy experiments.</li>
+        </ul>
+
+        <h2>Timeline</h2>
+        <ul class="plain measure">
+          <li><strong>October to December 2026.</strong> Preparation. The Julia code base and the first documentation.</li>
+          <li><strong>January 2027 to November 2028.</strong> Work with the Member States.</li>
+          <li><strong>December 2028 to January 2029.</strong> Final reports.</li>
+        </ul>
+
+        <h2>Who takes part</h2>
+        <p class="measure">Eighteen Member States take part. The roles differ:</p>
+        <ul class="plain measure">
+          <li><strong>Introduction track, nine countries.</strong> Cyprus, Germany, Estonia, Greece, Spain, Latvia, Malta, Portugal and Sweden. They have no working model of this kind. They receive a customised model, server access, training and a country visit.</li>
+          <li><strong>Implementation track, thirteen countries.</strong> Austria, Belgium, Cyprus, Germany, Greece, Spain, Finland, Italy, Latvia, Malta, the Netherlands, Portugal and Sweden. They work on national calibration, Eurostat data and the link to energy-system models, and on new sub-models.</li>
+          <li><strong>Both tracks.</strong> Cyprus, Germany, Greece, Spain, Latvia, Malta, Portugal and Sweden.</li>
+          <li><strong>Advisers.</strong> Austria, Belgium, Finland and Italy took part in TSI 2024. They advise the introduction track.</li>
+          <li><strong>Observers.</strong> France, Slovakia and Slovenia.</li>
+          <li><strong>Denmark.</strong> Advisory role.</li>
+        </ul>
+        <p class="measure">Country progress is described on the country pages as each institution agrees to publish it. This page does not report it.</p>
+
+        <h2>What it delivers</h2>
+        <p class="measure">DREAM publishes the public outputs on this website.</p>
+        <ul class="plain measure">
+          <li><strong>Code.</strong> An open-source Julia code base, ready in December 2026. The final code base follows in November 2028.</li>
+          <li><strong>Documentation and user guides.</strong> First versions in January 2027. Final versions in November 2028. A user guide for the server in April 2027.</li>
+          <li><strong>Training.</strong> Seminar and training material, with online presentations.</li>
+          <li><strong>Data pipeline.</strong> A technical note on the Eurostat pipeline, by June 2027.</li>
+          <li><strong>Calibration.</strong> Guidelines and a benchmark calibration paper, by December 2027.</li>
+          <li><strong>Technology data.</strong> Guidelines, by September 2027. The benchmark data set has restricted access.</li>
+          <li><strong>Energy-system interface.</strong> A concept note and a technical report, by December 2027.</li>
+          <li><strong>New sub-models.</strong> Code and documentation, by September 2028. Their benchmark data set has restricted access.</li>
+          <li><strong>Final technical report.</strong> By November 2028.</li>
+        </ul>
+        <p class="measure muted small">Dates are planned dates from the grant. They can move.</p>
+
+        <h2>Results</h2>
+        <p class="measure">The project has published no results yet. Analyses appear under <a href="applications.html">Analyses</a> as they are published.</p>
+        <p class="measure">The model it builds on, and the first public analysis, come from the <a href="project-tsi-2024.html">TSI 2024 project</a>. The refined edition it starts from comes from <a href="project-version-2-0.html">Version 2.0</a>.</p>
+
+        <h2>Read more</h2>
+        <ul class="plain measure">
+          <li><a href="https://reforms-investments.ec.europa.eu/technical-support-instrument-0/revenue-administration-and-public-financial-management/economic-analysis-climate-action_en">The Commission&rsquo;s project page</a></li>
+          <li><a href="documentation.html">Model documentation</a></li>
+          <li><a href="project-tsi-2024.html">TSI 2024</a> and <a href="project-version-2-0.html">Version 2.0</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Record</h3>
+        <table class="meta-table">
+          <tr><th>Funder</th><td>European Commission, Technical Support Instrument (TSI), through SG REFORM</td></tr>
+          <tr><th>Delivered by</th><td>DREAM</td></tr>
+          <tr><th>Period</th><td>1 October 2026 to 31 January 2029. 28 months.</td></tr>
+          <tr><th>Grant</th><td>TSI project 101359253, acronym ECONCLIMA2</td></tr>
+          <tr><th>Model edition</th><td>The next after version 2.0, towards version 3.0</td></tr>
+          <tr><th>Member States</th><td>18, in two tracks</td></tr>
+          <tr><th>Outcome</th><td>Trained national teams, an open-source code base, a Eurostat data pipeline, new sub-models</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="funding">
+      <p>Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission. Neither the European Union nor the granting authority can be held responsible for them.</p>
+    </div>
+
+  </div>
+</main>
+
+<section class="signup gridpaper" aria-label="Newsletter">
+  <div class="wrap">
+    <h2>Follow the project</h2>
+    <p>Outputs, training dates and the next version of the model.</p>
+    <form onsubmit="return false">
+      <label class="visually-hidden" for="email-tsi26">Sign-up not available yet</label>
+      <input id="email-tsi26" name="email" type="email" autocomplete="email" placeholder="Sign-up not available yet" />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>GreenREFORM-EU</h3>
+        <ul>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="user-guide.html">User guide</a></li>
+          <li><a href="get-the-model.html">Get the model</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="applications.html">Applications</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="dreammark"><img src="assets/dream-wordmark-white.svg" alt="DREAM" width="145" height="26" /></h3>
+        <p class="nametag">Danish Research Institute for<br />Economic Analysis and Modelling</p>
+        <p style="margin:0"><a href="https://dreamgruppen.dk/">dreamgruppen.dk</a></p>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; DREAM</span>
+      <a href="#">Privacy</a>
+      <a href="#">Cookies</a>
+      <a href="accessibility.html" lang="da">Tilg&aelig;ngelighedserkl&aelig;ring</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
