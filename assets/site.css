@@ -254,9 +254,13 @@ p { margin: 0 0 16px; }
 /* A type-only logo with no symbol reads larger than a mark at the same height. */
 .funder-logo.wordmark { margin-top: 12px; }
 .funder-logo.wordmark img { height: 40px; }
+/* A wide banner. At 56px the Hanoi lettering is about 8px high. */
+.funder-logo.banner img { width: auto; height: 96px; }
 @media (max-width: 760px) {
   .pagehead-title { flex-direction: column; gap: 0; }
   .eu-emblem, .funder-logo { margin: 0 0 18px; }
+  .funder-logo.banner { width: 100%; max-width: 356px; }
+  .funder-logo.banner img { width: 100%; height: auto; }
 }
 
 /* The funding statement and disclaimer the grant prescribes (Article 17.3). */
