@@ -4,8 +4,9 @@ Clickable pages for GreenREFORM-EU, using Direction 05 and the **connected
 discs** and **squared grid** from the brand lab. This is not the GoBasic theme.
 
 **To view:** double-click `index.html`. The navigation works, so you can click
-through the pages in a browser. Nothing is live: buttons, downloads and the
-newsletter form do nothing.
+through the pages in a browser. The newsletter band on each page links to
+DREAM's sign-up page, https://dreamgroup.dk/greenreform-eu; the site holds no
+form of its own.
 
 ## Where the graphic comes from
 

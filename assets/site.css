@@ -251,6 +251,9 @@ p { margin: 0 0 16px; }
 }
 .eu-emblem, .funder-logo { margin: 4px 0 0; flex: none; }
 .eu-emblem img, .funder-logo img { display: block; height: 56px; width: auto; }
+/* A type-only logo with no symbol reads larger than a mark at the same height. */
+.funder-logo.wordmark { margin-top: 12px; }
+.funder-logo.wordmark img { height: 40px; }
 @media (max-width: 760px) {
   .pagehead-title { flex-direction: column; gap: 0; }
   .eu-emblem, .funder-logo { margin: 0 0 18px; }
@@ -599,6 +602,9 @@ ul.plain li, ol.plain li { margin-bottom: 10px; }
 }
 
 .signup button:hover { background: var(--green-deep); }
+
+/* Sign-up is DREAM's own form on dreamgroup.dk; the band links to it. */
+.signup .signup-action { margin: 0; }
 
 footer.site {
   background: var(--ink);
